@@ -1,20 +1,23 @@
 const app = Vue.createApp({
     data(){
         return {
-                msg:"Hi, Mohammad Khaiurl Islam",
-                information:{
-                    name:"Mohammad Khaiurl Islam",
-                    email:"khairul@outlook.com",
-                    githublink:"https://github.com/khairulshagor576"
-                },
-                htmlCode:'<a href="https://github.com/khairulshagor576">Github</a>',
+                count:0
                }
             },
     methods: {
-        getDateTime(){
-            let ct = new Date();
-            return ct;
+        increment(){
+            this.count++;
+        },
+        decrement(){
+            if(this.count>0){
+                this.count--;
+            }
+            
         }
+        // getDateTime(){
+        //     let ct = new Date();
+        //     return ct;
+        // }
     },
     
 });

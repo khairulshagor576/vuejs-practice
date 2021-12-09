@@ -13,21 +13,17 @@
          </header>
 
          <div id="app">
-             <!-- string interpulation; -->
-             <!-- <p>{{ msg }}</p>
-             <p>{{ information.name }}</p>
-             <p>{{ information.email }}</p> -->
-             <!-- <p>khairul's Source code is available here. -->
-                 <!-- attribute binding -->
-                 <!-- <a v-bind:href="information.githublink">Github</a> -->
-             <!-- </p> -->
-             <!-- <p v-html="htmlCode"></p> -->
-             <!-- <p>Now Time is {{ getDateTime() }}</p> -->
-
              <h2>{{ count }}</h2>
-             <button v-on:click="increment">Increment</button>
-             <button v-on:click="decrement">Decrement</button>
-            </div>
+             <button @click="increment(1)">Increment</button>
+             <button v-on:click="decrement(1)">Decrement</button>
+             <br>
+             <br>
+             <button @click="increment(2)">Increment</button>
+             <button v-on:click="decrement(2)">Decrement</button>
+
+             <hr>
+             <button @click="test">Show Test</button>
+        </div>
 
          <script src="js/app.js"></script>
     </body>
