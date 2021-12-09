@@ -5,3 +5,12 @@ header{
     background-color: #60c377;
     color: #fff;
 }
+button{
+    padding: 5px;
+    margin-right: 10px;
+}
+button:hover{
+    background-color: #60c377;
+    border-radius: 10px;
+
+}
