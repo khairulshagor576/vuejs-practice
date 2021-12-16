@@ -13,16 +13,19 @@
          </header>
 
          <div id="app">
-             <form @submit.prevent="handleFromSubmit">
-                <h3>Enter your name Please!</h3>
-                <input type="text" @keyup.enter="handlekeyup">
-                <p>Welcome  {{ name }}!</p>
-                <button type="submit">Ok</button>
-             </form>
+             <h3>Enter a Number</h3>
+             <input type="text" v-model.number="num">
+             <br>
+             <br>
+             <button @click="getDouble">Get Double</button>
+             <button @click="getSquare">Get Square</button>
+             <button @click="addTen">Get 10</button>
+             <button @click="getReset">Reset</button>
              <hr>
-             <div class="card" @click="handleClick">
-                <button @click.stop="handleClickButton">View</button>
-             </div>
+             <label>Enter Number: </label>{{ num }}
+             <br>
+             <br>
+             <label>Result:</label>{{ result }}
         </div>
 
          <script src="js/app.js"></script>

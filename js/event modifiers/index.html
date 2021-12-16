@@ -13,18 +13,16 @@
          </header>
 
          <div id="app">
-             <h2>{{ count }}</h2>
-             <button @click="increment(1)">Increment</button>
-             <button v-on:click="decrement(1)">Decrement</button>
-             <br>
-             <br>
-             <button @click="increment(2)">Increment</button>
-             <button v-on:click="decrement(2)">Decrement</button>
-
+             <form @submit.prevent="handleFromSubmit">
+                <h3>Enter your name Please!</h3>
+                <input type="text" @keyup.enter="handlekeyup">
+                <p>Welcome  {{ name }}!</p>
+                <button type="submit">Ok</button>
+             </form>
              <hr>
-             <button @click="test">Show Test</button>
-             <hr>
-             <button @click="mounted">Number auto count</button>
+             <div class="card" @click="handleClick">
+                <button @click.stop="handleClickButton">View</button>
+             </div>
         </div>
 
          <script src="js/app.js"></script>
