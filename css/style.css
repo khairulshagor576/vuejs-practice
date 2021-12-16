@@ -14,3 +14,9 @@ button:hover{
     border-radius: 10px;
 
 }
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: #262626;
+}

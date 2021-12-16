@@ -1,26 +1,27 @@
 const app = Vue.createApp({
     data(){
         return {
-                count:0
-               }
-            },
-    methods: {
-        increment(amount){
-            this.count =this.count+amount;
-        },
-        decrement(amount){
-            if(this.count>0){
-                this.count=this.count-amount;
-            }
-            
-        },
-        test(){
-            console.log("Showing test function is successfully!");
+            name:"",
         }
-        // getDateTime(){
-        //     let ct = new Date();
-        //     return ct;
-        // }
+    },
+    methods: {
+        handlekeyup(e){
+           this.name=e.target.value;
+        },
+        handleFromSubmit()
+        {
+
+        },
+        handleClick(e)
+        {
+            console.log(e);
+            console.log("Card Click!");
+        },
+        handleClickButton(e)
+        {
+            console.log(e); 
+            console.log("Button Click");
+        }
     },
     
 });
