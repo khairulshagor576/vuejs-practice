@@ -13,15 +13,19 @@
          </header>
 
          <div id="app">
-             <button :class="{active: activeClass == 'red'}" @click="setClass('red')">Red</button>
-             <button :class="{active: activeClass == 'green'}" @click="setClass('green')">Green</button>
-             <button :class="{active: activeClass == 'blue',bold:true}" @click="setClass('blue')">Blue</button>
+             <h3>Enter a Number</h3>
+             <input type="text" v-model.number="num">
              <br>
              <br>
+             <button @click="getDouble">Get Double</button>
+             <button @click="getSquare">Get Square</button>
+             <button @click="addTen">Get 10</button>
+             <button @click="getReset">Reset</button>
+             <hr>
+             <label>Enter Number: </label>{{ num }}
              <br>
-             <div :class="activeClass">
-
-             </div>
+             <br>
+             <label>Result:</label>{{ result }}
         </div>
 
          <script src="js/app.js"></script>
