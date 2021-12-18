@@ -13,15 +13,12 @@
          </header>
 
          <div id="app">
-             <button :class="{active: activeClass == 'red'}" @click="setClass('red')">Red</button>
-             <button :class="{active: activeClass == 'green'}" @click="setClass('green')">Green</button>
-             <button :class="{active: activeClass == 'blue',bold:true}" @click="setClass('blue')">Blue</button>
-             <br>
-             <br>
-             <br>
-             <div :class="activeClass">
-
-             </div>
+            <input type="text" v-model="newSkill">
+            <button @click="addNewSkill">Add Skill</button>
+            <h3>Skills</h3>
+            <ul>
+                <li v-for="(skill,i) in skills" @click="removeSkill(i)">{{i+1}} {{skill.name}} ({{skill.exprience}})</li>
+            </ul>
         </div>
 
          <script src="js/app.js"></script>
