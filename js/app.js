@@ -1,23 +1,22 @@
 const app = Vue.createApp({
     data(){
-        return {
-            skills:[
-            {name:"HTML",exprience:5},
-            {name:"CSS",exprience:6},
-            {name:"Bootstrap",exprience:7},
-            {name:"JS",exprience:10}],
-            newSkill:{},
+        return{
+            user:"khairul",
+            x:0,
+            y:0
         }
     },
     methods:{
-        addNewSkill()
-        {
-            this.skills.push({name:this.newSkill,exprience:0});
-            this.newSkill={};
+        changeUser(){
+            setTimeout(()=>{
+                this.user="Islam";
+            },2000);
         },
-        removeSkill(i)
+        mouseMove(event)
         {
-          this.skills.splice(i,1);
+          //console.log(event);
+          this.x=event.clientX;
+          this.y=event.clientY;
         }
     }
 

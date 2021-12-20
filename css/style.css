@@ -47,3 +47,10 @@ button{
 .bold{
     font-weight: bold;
 }
+
+.box{
+    background: red;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}

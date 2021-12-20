@@ -13,16 +13,14 @@
          </header>
 
          <div id="app">
-            <p>{{user}}</p>
-            <p v-once>{{user}}</p>
-            {{changeUser()}}
-            <br>
-            <div v-on:mousemove="mouseMove" class="box">
-                Hover me!
-            </div>
-            <p>X : {{x}}</p>
-            <p>Y : {{y}}</p>
+            <input type="text" v-model="newSkill.name">
+            <button @click="addNewSkill">Add Skill</button>
+            <h3>Skills</h3>
+            <ul>
+                <li v-for="(skill,i) in skills" @click="removeSkill(i)">{{i+1}} {{skill.name}} ({{skill.exprience}})</li>
+            </ul>
         </div>
+
          <script src="js/app.js"></script>
     </body>
 </html>
