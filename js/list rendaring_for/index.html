@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/vue.global.js"></script>
+    </head>
+    <body>
+         <header>
+             <h1>Learing Vue3</h1>
+         </header>
+
+         <div id="app">
+              <h3>About Me</h3>
+              <table border="1">
+                  <tr v-for="(value,key) in aboutMe">
+                      <th>{{key}}</th>
+                      <td>{{value}}</td>
+                  </tr>
+              </table>
+         </div>
+
+         <script src="js/app.js"></script>
+    </body>
+</html>
