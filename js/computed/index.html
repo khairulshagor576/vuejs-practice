@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/vue.global.js"></script>
+    </head>
+    <body>
+         <header>
+             <h1>Learing Vue3</h1>
+         </header>
+
+         <div id="app">
+             <h3>Showing Skills</h3>
+             <ul>
+                 <li v-for="(skill,i) in skills" :key="skill.name" @click="removeSkill(i)">
+                     <p>{{skill.name}} - {{skill.exprience}}</p>
+                 </li>
+             </ul>
+             <p>Total skills = {{totalCount}}</p>
+         </div>
+
+         <script src="js/app.js"></script>
+    </body>
+</html>
