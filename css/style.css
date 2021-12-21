@@ -21,6 +21,7 @@ button{
     width: 100px;
     height: 100px;
     background-color: #262626;
+    margin: 5px;
 }
 
 .red{
@@ -53,4 +54,8 @@ button{
     height: 200px;
     width: 200px;
     text-align: center;
+}
+
+input{
+    margin-top: 10px;
 }

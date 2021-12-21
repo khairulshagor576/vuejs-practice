@@ -1,27 +1,26 @@
 const app = Vue.createApp({
     data(){
         return{
-          skills:[
-            {name:"php",exprience:5},
-            {name:"python",exprience:2},
-            {name:"dart",exprience:3},
-            {name:"jave",exprience:5},
-            {name:"javascript",exprience:3},
-          ]
+          mobile:"",
         }
     },
-    computed:{
-        totalCount(){
-            console.log("count from method");
-            return this.skills.length;
-        },
+    watch:{
+       mobile(newvalue){
+
+        if(isNaN(newvalue))
+        {
+            alert("Enter the valid number!");
+        }
+        
+        if(newvalue.length==11)
+        {
+            alert("this is your valid number");
+        }
+
+       } 
     },
     methods:{
-        removeSkill(i)
-        {
-          this.skills.splice(i,1);
-        },
-        
+  
     }
 
 });
